@@ -29,5 +29,8 @@ jobs:
       - name: Run unit tests
         run: npm test -- --watch=false --browsers=ChromiumHeadless
 
-      - name: Build Angular app
-        run: npm run build
+      - name: Build Angular app (circle-progress)
+        run: npm run build circle-progress
+
+      - name: Build Angular app (demo)
+        run: npm run build demo
