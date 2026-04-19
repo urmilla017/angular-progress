@@ -1,0 +1,46 @@
+.circle-progress-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-progress {
+  position: relative;
+  display: inline-block;
+}
+
+.circle-progress-bar {
+  display: block;
+  transform: rotate(-90deg);
+}
+
+.circle {
+  transition: stroke-dashoffset 0.6s ease-in-out;
+}
+
+.circle-progress-content {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  pointer-events: none;
+}
+
+.circle-progress-content-value {
+  font-weight: 600;
+  line-height: 1;
+
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.circle-progress-content-label {
+  margin-top: 4px;
+  opacity: 0.7;
+
+  font-size: clamp(0.75rem, 1.2vw, 1rem);
+}

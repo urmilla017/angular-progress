@@ -1,0 +1,42 @@
+<div class="circle-progress-wrapper">
+  <div class="circle-progress">
+    <svg
+      class="circle-progress-bar"
+      [attr.viewBox]="svgBox()"
+      [attr.width]="size()"
+      [attr.height]="size()"
+    >
+      <circle
+        [attr.cx]="radius()"
+        [attr.cy]="radius()"
+        [attr.r]="radius()"
+        [attr.stroke]="strokeBackgroundColor()"
+        [attr.stroke-width]="strokeWidth()"
+        [attr.stroke-linecap]="strokeLinecap()"
+        [attr.fill]="backgroundColor()"
+      />
+
+      <circle
+        class="circle"
+        [attr.cx]="radius()"
+        [attr.cy]="radius()"
+        [attr.r]="radius()"
+        [attr.stroke]="strokeColor()"
+        [attr.stroke-width]="strokeWidth()"
+        [attr.stroke-dasharray]="dashArray()"
+        [attr.stroke-dashoffset]="dashOffset()"
+        [attr.stroke-linecap]="strokeLinecap()"
+        fill="none"
+      />
+    </svg>
+
+    <div class="circle-progress-content">
+      <div class="circle-progress-content-value">
+        {{ progressValue() }}
+      </div>
+      <div class="circle-progress-content-label">
+        {{ progressLabel() }}
+      </div>
+    </div>
+  </div>
+</div>

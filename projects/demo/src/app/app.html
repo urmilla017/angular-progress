@@ -1,0 +1,18 @@
+<div class="circle-progress-demo">
+  <app-circle-progress
+    [progressValue]="progress()"
+    progressLabel="Loading"
+  ></app-circle-progress>
+
+  <div class="controls">
+    <div class="label">Change label</div>
+
+    <input
+      type="number"
+      min="0"
+      max="100"
+      [value]="progress()"
+      (input)="onInputChange($any($event.target).value)"
+    />
+  </div>
+</div>

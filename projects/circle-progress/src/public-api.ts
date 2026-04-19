@@ -1,0 +1,1 @@
+export { CircleProgressComponent } from './lib/circle-progress/circle-progress';
